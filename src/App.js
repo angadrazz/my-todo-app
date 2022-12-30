@@ -3,6 +3,32 @@ import "./App.css";
 import { useState } from "react";
 const [count, setCount] = useState(0);
 
+export default function App() {
+  const [count, setCount] = useState(0);
+
+  const add = () => {
+    setCount(count + 1);
+  };
+
+  const reduce = () => {
+    setCount(count - 1);
+  };
+
+  const reset = () => {
+
+    setCount(0);
+  };
+
+  return (
+    <div className="App">
+      <h1>Counter - {count}</h1>
+      <button onClick={add}>Add</button>
+      <button onClick={reduce}>Reduce</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+}
+
 
 function ToDoList() {
   const [todo, settodo] = useState([]);
@@ -61,4 +87,4 @@ function ToDoList() {
   );
 }
 
-export default ToDoList;
+// export default ToDoList;
