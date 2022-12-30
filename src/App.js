@@ -1,6 +1,8 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+const [count, setCount] = useState(0);
+
 
 function ToDoList() {
   const [todo, settodo] = useState([]);
